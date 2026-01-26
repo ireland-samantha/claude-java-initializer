@@ -79,20 +79,25 @@ def interactive_select(templates: list[dict]) -> list[dict]:
     selected = [False] * len(templates)
     current = 0
 
+    def write(text):
+        """Write text with proper line endings for raw mode."""
+        sys.stdout.write(text.replace("\n", "\r\n"))
+        sys.stdout.flush()
+
     def render():
         # Clear screen and move cursor to top
-        print("\033[2J\033[H", end="")
-        print("Select templates to merge (SPACE to toggle, ENTER to confirm, q to quit):\n")
+        write("\033[2J\033[H")
+        write("Select templates to merge (SPACE to toggle, ENTER to confirm, q to quit):\n\n")
 
         for i, t in enumerate(templates):
             cursor = ">" if i == current else " "
             check = "[x]" if selected[i] else "[ ]"
             base_marker = " [BASE]" if t["is_base"] else ""
-            print(f" {cursor} {check} {t['rel_path']}{base_marker}")
-            print(f"       {t['title']}")
+            write(f" {cursor} {check} {t['rel_path']}{base_marker}\n")
+            write(f"       {t['title']}\n")
 
         count = sum(selected)
-        print(f"\n{count} template(s) selected")
+        write(f"\n{count} template(s) selected")
 
     # Set terminal to raw mode for single keypress reading
     import tty
@@ -127,14 +132,15 @@ def interactive_select(templates: list[dict]) -> list[dict]:
             elif ch == "\r" or ch == "\n":  # Enter to confirm
                 break
             elif ch == "q" or ch == "\x03":  # q or Ctrl+C to quit
-                print("\033[2J\033[H", end="")  # Clear screen
-                print("Cancelled.")
+                write("\033[2J\033[H")  # Clear screen
+                write("Cancelled.\n")
                 return []
     finally:
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
 
     # Clear screen after selection
-    print("\033[2J\033[H", end="")
+    sys.stdout.write("\033[2J\033[H")
+    sys.stdout.flush()
 
     return [t for i, t in enumerate(templates) if selected[i]]
 
