@@ -3,9 +3,9 @@
 Merge Claude Code prompt templates into a single CLAUDE.md file.
 
 Usage:
+    ./prompt-merge.py                 Interactive selection and merge
     ./prompt-merge.py --list          List all available templates
-    ./prompt-merge.py go              Interactive selection and merge
-    ./prompt-merge.py go -o FILE      Output to specific file (default: CLAUDE.md)
+    ./prompt-merge.py -o FILE         Output to specific file (default: CLAUDE.md)
 """
 
 import argparse
@@ -216,12 +216,6 @@ def main():
         help="List all available templates"
     )
     parser.add_argument(
-        "command",
-        nargs="?",
-        choices=["go"],
-        help="Command to run (go: interactive selection)"
-    )
-    parser.add_argument(
         "-o", "--output",
         default="CLAUDE.md",
         help="Output file path (default: CLAUDE.md)"
@@ -231,7 +225,8 @@ def main():
 
     if args.list:
         list_templates()
-    elif args.command == "go":
+    else:
+        # Default: interactive selection
         templates = get_all_templates()
         if not templates:
             print("No templates found in", TEMPLATES_DIR)
@@ -240,8 +235,6 @@ def main():
         selected = interactive_select(templates)
         if selected:
             merge_templates(selected, args.output)
-    else:
-        parser.print_help()
 
 
 if __name__ == "__main__":

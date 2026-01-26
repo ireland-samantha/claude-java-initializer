@@ -23,14 +23,14 @@ Templates can extend each other. Use `prompt-merge.py go` to combine a base temp
 The `prompt-merge.py` script lets you interactively select and combine templates:
 
 ```bash
+# Interactive selection — merge multiple templates into one CLAUDE.md
+./prompt-merge.py
+
 # List all available templates
 ./prompt-merge.py --list
 
-# Interactive selection — merge multiple templates into one CLAUDE.md
-./prompt-merge.py go
-
 # Output to a custom path
-./prompt-merge.py go -o /path/to/your/project/CLAUDE.md
+./prompt-merge.py -o /path/to/your/project/CLAUDE.md
 ```
 
 The interactive mode uses arrow keys or j/k to navigate, SPACE to toggle selection, and ENTER to confirm.
