@@ -11,7 +11,7 @@ A generator for CLAUDE.md templates. These templates provide Claude Code with ar
 | `templates/java/CLAUDE-autonomous-api-first-design.md` | Extends base with autonomous execution mode — Claude works without pausing for confirmation |
 | `templates/java/spring-boot/CLAUDE-java-spring-boot.md` | Java/Spring Boot specific with JPA patterns, provider architecture, and Maven workflows |
 
-Templates can extend each other. Use `prompt-merge.py go` to combine a base template with extensions into a single file.
+Templates can extend each other. Use `prompt-merge.py` to combine a base template with extensions into a single file.
 
 ## Quick Start
 
