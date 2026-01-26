@@ -18,7 +18,7 @@ Templates can extend each other. Use `prompt-merge.py go` to combine a base temp
 
 ## Quick Start
 
-### Using prompt-merge.py (Recommended)
+### 1. Create template with prompt-merge.py
 
 The `prompt-merge.py` script lets you interactively select and combine templates:
 
@@ -35,16 +35,13 @@ The `prompt-merge.py` script lets you interactively select and combine templates
 
 The interactive mode uses arrow keys or j/k to navigate, SPACE to toggle selection, and ENTER to confirm.
 
-### Manual Usage
-
-1. **Choose a template** that matches your stack or start with `CLAUDE-base.md`
-2. **Give it to Claude** with your project context:
+### 2. Contextualize with Claude
 ```
    Here's a CLAUDE.md template I'd like to use. Please review my project
-   structure and contextualize this template for my specific codebase,
+   structure and contextualize this template within my specific codebase,
    then update my CLAUDE.md.
 ```
-3. **Iterate** as your project evolves by asking Claude to update the file after learning something or making mistakes.
+###3. **Iterate** as your project evolves by asking Claude to update the file after learning something or making mistakes.
 
 ## What's Inside
 
