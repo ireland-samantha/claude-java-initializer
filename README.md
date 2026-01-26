@@ -10,17 +10,38 @@ These templates provide Claude Code with architectural guidelines, coding standa
 
 | Template | Description |
 |----------|-------------|
-| `CLAUDE-base.md` | Language-agnostic foundation covering clean architecture, API-first design, plugin systems, testing, and quality gates |
-| `CLAUDE-java-spring.md` | Java/Spring Boot specific with JPA patterns, provider architecture, and Maven workflows |
-| *More coming soon* | |
+| `templates/CLAUDE-base.md` | Language-agnostic foundation covering clean architecture, API-first design, plugin systems, testing, and quality gates |
+| `templates/java/CLAUDE-autonomous-api-first-design.md` | Extends base with autonomous execution mode — Claude works without pausing for confirmation |
+| `templates/java/spring-boot/CLAUDE-java-spring-boot.md` | Java/Spring Boot specific with JPA patterns, provider architecture, and Maven workflows |
 
-## Usage
+Templates can extend each other. Use `prompt-merge.py go` to combine a base template with extensions into a single file.
+
+## Quick Start
+
+### Using prompt-merge.py (Recommended)
+
+The `prompt-merge.py` script lets you interactively select and combine templates:
+
+```bash
+# List all available templates
+./prompt-merge.py --list
+
+# Interactive selection — merge multiple templates into one CLAUDE.md
+./prompt-merge.py go
+
+# Output to a custom path
+./prompt-merge.py go -o /path/to/your/project/CLAUDE.md
+```
+
+The interactive mode uses arrow keys or j/k to navigate, SPACE to toggle selection, and ENTER to confirm.
+
+### Manual Usage
 
 1. **Choose a template** that matches your stack or start with `CLAUDE-base.md`
 2. **Give it to Claude** with your project context:
 ```
-   Here's a CLAUDE.md template I'd like to use. Please review my project 
-   structure and contextualize this template for my specific codebase, 
+   Here's a CLAUDE.md template I'd like to use. Please review my project
+   structure and contextualize this template for my specific codebase,
    then update my CLAUDE.md.
 ```
 3. **Iterate** as your project evolves by asking Claude to update the file after learning something or making mistakes.
