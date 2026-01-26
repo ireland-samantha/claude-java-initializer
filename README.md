@@ -1,7 +1,9 @@
 # Claude Code Templates
 
 ## What is this?
-A generator for CLAUDE.md templates. These templates provide Claude Code with architectural guidelines, coding standards, and development workflows that produce consistent, maintainable, production-quality code. Instead of repeating the same instructions across projects, generate a custom template, ask Claude to contextualize it, and let then let it follow established best practices.
+tl;dr A generator for customizable CLAUDE.md templates to encourage Claude to produce higher-quality code.
+
+These templates provide Claude Code with architectural guidelines, coding standards, and development workflows that produce consistent, maintainable, production-quality code. Instead of repeating the same instructions across projects, generate a custom template, ask Claude to contextualize it, and let then let it follow established best practices.
 
 ## Templates
 
