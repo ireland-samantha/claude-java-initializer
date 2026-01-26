@@ -94,7 +94,7 @@ def interactive_select(templates: list[dict]) -> list[dict]:
             check = "[x]" if selected[i] else "[ ]"
             base_marker = " [BASE]" if t["is_base"] else ""
             write(f" {cursor} {check} {t['rel_path']}{base_marker}\n")
-            write(f"       {t['title']}\n")
+           # write(f"       {t['title']}\n")
 
         count = sum(selected)
         write(f"\n{count} template(s) selected")

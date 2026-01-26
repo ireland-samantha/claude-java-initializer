@@ -7,13 +7,83 @@ These templates provide Claude Code with architectural guidelines, coding standa
 
 ## Templates
 
+### Base
 | Template | Description |
 |----------|-------------|
-| `templates/CLAUDE-base.md` | Language-agnostic foundation covering clean architecture, API-first design, plugin systems, testing, and quality gates |
-| `templates/java/CLAUDE-autonomous-api-first-design.md` | Extends base with autonomous execution mode — Claude works without pausing for confirmation |
-| `templates/java/spring-boot/CLAUDE-java-spring-boot.md` | Java/Spring Boot specific with JPA patterns, provider architecture, and Maven workflows |
+| `CLAUDE-base.md` | Language-agnostic foundation: clean architecture, API-first design, plugin systems, testing, quality gates |
 
-Templates can extend each other. Use `prompt-merge.py` to combine a base template with extensions into a single file.
+### JavaScript / TypeScript
+| Template | Description |
+|----------|-------------|
+| `javascript/CLAUDE-javascript.md` | TypeScript-first patterns, async/await, error handling, ES modules |
+| `javascript/react/CLAUDE-react.md` | Functional components, hooks, React Query, Testing Library |
+| `javascript/vue/CLAUDE-vue.md` | Composition API, Pinia, Vue Router, Vue Test Utils |
+| `javascript/angular/CLAUDE-angular.md` | Standalone components, signals, RxJS, dependency injection |
+| `javascript/nextjs/CLAUDE-nextjs.md` | App Router, Server Components, Server Actions, middleware |
+| `javascript/nestjs/CLAUDE-nestjs.md` | Modules, decorators, guards, interceptors, TypeORM |
+| `javascript/node-express/CLAUDE-node-express.md` | Express patterns, middleware, async handlers, validation |
+
+### Python
+| Template | Description |
+|----------|-------------|
+| `python/CLAUDE-python.md` | Type hints, dataclasses, Pydantic, async patterns, pytest |
+| `python/django/CLAUDE-django.md` | DRF, services/selectors pattern, ORM, serializers |
+| `python/flask/CLAUDE-flask.md` | Blueprints, SQLAlchemy, Marshmallow, application factory |
+| `python/fastapi/CLAUDE-fastapi.md` | Async endpoints, Pydantic v2, dependency injection, OpenAPI |
+
+### Java
+| Template | Description |
+|----------|-------------|
+| `java/CLAUDE-java.md` | Java 21+, records, sealed classes, virtual threads, pattern matching |
+| `java/CLAUDE-autonomous-api-first-design.md` | Autonomous execution mode — Claude works without pausing for confirmation |
+| `java/spring-boot/CLAUDE-java-spring-boot.md` | Spring Boot, JPA, provider architecture, Maven workflows |
+
+### C# / .NET
+| Template | Description |
+|----------|-------------|
+| `csharp/CLAUDE-csharp.md` | .NET 8+, C# 12, records, nullable reference types, EF Core |
+| `csharp/aspnet-core/CLAUDE-aspnet-core.md` | Minimal APIs, middleware, health checks, output caching |
+
+### Go
+| Template | Description |
+|----------|-------------|
+| `go/CLAUDE-go.md` | Interfaces, error handling, concurrency, context, testing |
+
+### Rust
+| Template | Description |
+|----------|-------------|
+| `rust/CLAUDE-rust.md` | Ownership, traits, async/await, Axum, error handling with thiserror |
+
+### C++
+| Template | Description |
+|----------|-------------|
+| `cpp/CLAUDE-cpp.md` | C++20, RAII, smart pointers, concepts, ranges, CMake |
+
+### PHP
+| Template | Description |
+|----------|-------------|
+| `php/CLAUDE-php.md` | PHP 8.2+, strict types, enums, readonly classes, Composer |
+| `php/laravel/CLAUDE-laravel.md` | Eloquent, service classes, form requests, policies, jobs |
+
+### Ruby
+| Template | Description |
+|----------|-------------|
+| `ruby/CLAUDE-ruby.md` | Ruby 3.2+, pattern matching, Data class, RSpec |
+| `ruby/rails/CLAUDE-rails.md` | Services, query objects, serializers, Pundit, RSpec |
+
+### Swift
+| Template | Description |
+|----------|-------------|
+| `swift/CLAUDE-swift.md` | Swift 5.9+, actors, async/await, SwiftUI, Codable |
+
+### Kotlin
+| Template | Description |
+|----------|-------------|
+| `kotlin/CLAUDE-kotlin.md` | Coroutines, Flow, sealed classes, extension functions, Kotest |
+
+---
+
+Templates extend each other (e.g., `react` extends `javascript` extends `base`). Use `prompt-merge.py` to combine templates into a single file.
 
 ## Quick Start
 
