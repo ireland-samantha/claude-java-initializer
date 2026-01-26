@@ -1,10 +1,7 @@
 # Claude Code Templates
 
-A collection of `CLAUDE.md` templates for AI-driven development with Claude Code.
-
 ## What is this?
-
-These templates provide Claude Code with architectural guidelines, coding standards, and development workflows that produce consistent, maintainable, production-quality code. Instead of repeating the same instructions across projects, drop in a template and let Claude follow established best practices.
+A generator for CLAUDE.md templates. These templates provide Claude Code with architectural guidelines, coding standards, and development workflows that produce consistent, maintainable, production-quality code. Instead of repeating the same instructions across projects, generate a custom template, ask Claude to contextualize it, and let then let it follow established best practices.
 
 ## Templates
 
@@ -41,7 +38,7 @@ The interactive mode uses arrow keys or j/k to navigate, SPACE to toggle selecti
    structure and contextualize this template within my specific codebase,
    then update my CLAUDE.md.
 ```
-###3. **Iterate** as your project evolves by asking Claude to update the file after learning something or making mistakes.
+### 3. **Iterate** as your project evolves by asking Claude to update the file after learning something or making mistakes.
 
 ## What's Inside
 
