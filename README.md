@@ -1,13 +1,12 @@
-# Claude Code Preamble Templates
+# Claude Code Java Initializer
 
 ## What is this?
 
-A small collection of Java CLAUDE.md templates to help Claude produce higher-quality code. These templates can be contextualized by Claude for a specific codebase and reused across projects.
-New languages can be either written manually or derived using Claude.
+A handful of CLAUDE.md files I give to new Java projects + a script to combine them 
 
 ## Why?
 
-As projects grow, repeating architectural and workflow instructions to an AI becomes noisy, inconsistent, and error-prone. These templates turn those expectations into a reusable, versioned preamble that Claude can reliably follow across projects.
+To set expectations from the start with Claude from well-known principles, and then add project context later.
 
 ## Quick Start
 
@@ -59,9 +58,6 @@ These templates encode practices for:
 - **Testing** — Test pyramid, integration testing, quality gates
 - **Autonomous workflows** — Let Claude execute without hand-holding, intervene when needed
 
-## Contributing
-
-Found something that makes Claude produce better code? PRs welcome.
 
 ## License
 
