@@ -28,6 +28,8 @@ The `prompt-merge.py` script lets you interactively select and combine templates
 The interactive mode uses arrow keys or j/k to navigate, SPACE to toggle selection, and ENTER to confirm.
 
 ### 2. Contextualize with Claude
+In your codebase directory, give Claude the the CLAUDE.md file and ask it to contextualize for the project:
+
 ```
    Here's a CLAUDE.md template I'd like to use. Please review my project
    structure and contextualize this template within my specific codebase,
